@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="keywords" content="Guinea">
+    <meta name="description" content="Een gepersonaliseerde pagina over het land Guinea">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guinea</title>
+    <script src="https://kit.fontawesome.com/6ceec5fb3d.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            color: #0F4C81;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            margin: 10px;
+        }
+
+        .header img,
+        iframe {
+            border-radius: 10px;
+        }
+
+
+        h3,
+        p,
+        .categories h2 {
+            display: inline;
+        }
+
+        .header {
+            display: flex;
+        }
+
+        #map {
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            transition: transform 5s ease;
+        }
+
+        .tekst {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .categories a:hover {
+            opacity: 0.8;
+        }
+
+        .categories img {
+            border-radius: 10px;
+        }
+
+        .categorie {
+            flex: 1;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        a img {
+            margin-top: 10px;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 50px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #0F4C81;
+        }
+
+        @media only screen and (max-width: 1024px) {
+
+            .header {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .categorie {
+                flex-basis: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 920px) {
+            .categories {
+                display: flex;
+                flex-direction: column;
+            }
+            footer{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            footer a{
+                margin-bottom: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="/asset/drapeau-guinee-min.jpg" style="width: 100%; height: 450px;" alt="Guinea flag">
+        <div id="map">
+            <iframe id="mapFrame"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-24.5973,3.0737,-7.6547,12.6762&amp;layer=mapnik&amp;marker=9.5503,-13.6773"
+                width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+        <script>
+            var mapFrame = document.getElementById('mapFrame');
+
+            mapFrame.onload = function () {
+                mapFrame.contentWindow.addEventListener('click', function () {
+                    mapFrame.src = "https://www.openstreetmap.org/export/embed.html?bbox=-14,4,-8,12&amp;layer=mapnik";
+                });
+            };
+
+            var map = L.map('map').setView([10.5, -10.5], 6); // Coordonnées du centre de la Guinée et niveau de zoom initial
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var marker = L.marker([10.5, -10.5]).addTo(map); // Marqueur au centre de la Guinée
+
+        </script>
+    </div>
+    <div class="tekst">
+        <h1>Guinea</h1>
+        <P>Oficieel gekend als (Republic de Guinee), is een land gelegen aan het westkust van Afrika. De hoofdstad is
+            Conakry, het land heeft een bevolking van ongeveer 13,2 miljoen mensen en een oppervlakte
+            van 245.857 virkante kilometer.</P>
+
+        <h2>Geografie:</h2>
+        <p> Guinee wordt begrensd door de Atlantische Oceaan in het westen, Guinea-Bissau en Senegal in het noorden,
+            Mali in het noorden en noordoosten, Ivoorkust (Côte d'Ivoire) in het zuidoosten, en Liberia en Sierra Leone
+            in het zuiden. Het land heeft een diverse geografie, waaronder kustvlaktes, bergen en savannes.</p>
+
+        <h2>Economie:</h2>
+        <p>Guinee heeft aanzienlijke natuurlijke hulpbronnen, waaronder bauxiet, ijzererts, goud en diamanten.
+            Landbouw is een belangrijke sector, met belangrijke exportproducten zoals koffie, cacao en palmnoten.
+            Ondanks zijn rijkdom aan natuurlijke hulpbronnen staat Guinee voor uitdagingen zoals politieke
+            instabiliteit, corruptie en slechte infrastructuur.</p>
+
+        <h2>Cultuur en Samenleving: </h2>
+        <p>Guinee heeft een rijke culturele erfgoed met diverse etnische groepen, elk met zijn eigen tradities en
+            talen.
+            Muziek en dans zijn integrale onderdelen van de Guinese cultuur, met traditionele muziekgenres zoals
+            Mandingue, Sosso-Bala en Fulani-muziek. Het land staat bekend om zijn levendige festivals en vieringen.</p>
+
+        <h2>Opmerkelijke Plaatsen:</h2>
+
+        <h3>Fouta Djallon: </h3>
+        <p>Een hooglandgebied in het centrum van het land, bekend om zijn schilderachtige
+            landschappen, watervallen en wandelmogelijkheden.</p> <br>
+
+        <h3>Îles de Los: </h3>
+        <p>Een groep eilanden voor de kust van Conakry, populair vanwege hun stranden en zeeleven.</p> <br>
+        <h3>Mount Nimba: </h3>
+        <p>Gedeeld met Ivoorkust en Liberia, deze UNESCO Werelderfgoedlocatie staat bekend om zijn
+            biodiversiteit en unieke ecosystemen.</p> <br>
+        <h2>Geschiedenis: </h2>
+        <p> Guinee maakte deel uit van het Mali-rijk in de 13e eeuw en later het Songhai-rijk.
+            In de 19e eeuw werd het een Franse kolonie die bekend stond als Frans-Guinea.
+            Het land verkreeg onafhankelijkheid van Frankrijk onder leiding van Ahmed Sékou Touré in 1958.
+            Na de onafhankelijkheid kende Guinee politieke en economische uitdagingen, waaronder een lange periode van
+            autoritair bewind onder Sékou Touré.
+            Sinds de jaren 1990 heeft Guinee inspanningen geleverd voor democratisering, hoewel het te maken heeft gehad
+            met politieke instabiliteit en af en toe onrust.
+            Guinee's geschiedenis, diverse cultuur en natuurlijke schoonheid maken het een fascinerend land in
+            West-Afrika.
+        </p>
+
+    </div>
+    <div class="categories">
+        <div class="categorie">
+            <h1>Gerechten</h1>
+            <div class="categorie_tekst">
+                <h2>Latchiri et kossan: </h2>
+                <p>Latchiri et Kossan! Sommigen (de kenners) beginnen al te watertanden bij alleen al de gedachte aan
+                    dit
+                    legendarische Guinese gerecht waarvan de Peulh-vrouwen de geheime recepten voorbereiden in hun
+                    intieme
+                    kringen. Geen bruiloftsceremonie van enige betekenis zonder Latsiri (couscous) dat gulzig wordt
+                    gegeten
+                    met Kossan (gestremde melk).
+                </p>
+            </div>
+            <a href="https://lims.mondoblog.org/le-latsiri-et-kossan-ou-l%E2%80%99art-culinaire-peulh/"
+                target="_blank"><img src="/asset/latchiri-min.jpg" style="height: 300px; width: 300px;"
+                    alt="Latchiri et kossan">
+            </a> <br><br><br>
+
+            <div class="categorie_tekst">
+                <h2>Foutti: </h2>
+                <p>Foutti is een iconisch gerecht uit Guinee. Oorspronkelijk was het bedoeld als maaltijd voor
+                    bescheiden
+                    families (omdat er geen vlees of vis in zit), maar tegenwoordig eet iedereen het in Guinee.</p>
+            </div>
+
+            <a href="https://savoureuxvoyage.wordpress.com/2022/12/09/fouti/" target="_blank"><img
+                    src="/asset/hq720-min.jpg" style="height: 300px; width: 300px;" alt="foutti">
+            </a><br><br><br>
+        </div>
+        <div class="categorie">
+            <h1>Muziek</h1>
+            <div class="categorie_tekst">
+                <h2>Banlieuzart: </h2>
+                <p>"Met de wens de stem van de stemlozen te zijn, hebben Marcus en King Salamon een muziekstijl
+                    ontwikkeld die een mix is van afro-reggae, afro-folk, dancehall, en afro-rap.
+                    Hun liedjes, met bewuste, geëngageerde en activistische teksten , worden
+                    gezongen in Malinké, Soussou, Peul, Wolof, Frans of Engels."</p>
+
+            </div>
+            <a href="https://open.spotify.com/artist/6JqtNw61xDf0BfWXcHrnYW" target="_blank"><img
+                    src="/asset/banlieuzart-cpyspic-min.jpg" style="height: 300px; width: 300px;"
+                    alt=""></a><br><br><br>
+
+            <div class="categorie_tekst">
+                <h2>Soul Bang's: </h2>
+                <p>Op 11-jarige leeftijd sluit hij zich aan bij een lokale rapgroep genaamd Micro Mega, waarmee hij
+                    deelneemt aan zijn eerste culturele competities, deze evenementen die de muzikale activiteit in
+                    Guinee bepalen en structureren. In 2007 besluit hij deze collectieve ervaring achter zich te laten
+                    en een meer persoonlijke weg te volgen.</p>
+            </div>
+
+            <a href="https://open.spotify.com/artist/6UehtY17AaBNwAKP3d97m8" target="_blank"><img
+                    src="/asset/maxresdefault-min.jpg" style="height: 300px; width: 300px;" alt=""></a><br><br><br>
+        </div>
+        <div class="categorie">
+            <h1>talen</h1>
+            <a href="https://fr.wikipedia.org/wiki/Fran%C3%A7ais" target="_blank">
+                <h2>Frans</h2> <br>
+            </a>
+
+            <a href="https://fr.wikipedia.org/wiki/Soso_(langue)" target="_blank">
+                <h2>Soussou </h2> <br>
+
+            </a>
+            <a href="https://fr.wikipedia.org/wiki/Peul" target="_blank">
+                <h2>Poular</h2><br>
+            </a>
+            <a href="https://fr.wikipedia.org/wiki/Langues_mandingues" target="_blank">
+                <h2>Malinké</h2><br>
+            </a>
+            ...
+
+
+        </div>
+
+    </div>
+    <footer>
+        <a href="tel:+32 456 13 81 95"><i class="fa-solid fa-phone fa-2xl"></i> 0456 13 81 95</a>
+        <a href="mailto:mamadouwoury641@gamil.com"><i class="fa-solid fa-envelope fa-2xl"></i>
+            mamadouwoury641@gamil.com</a>
+        <a href="https://www.linkedin.com/in/mamadou-woury-barry-915374228/" target="_blank">
+            <i class="fa-brands fa-linkedin fa-2xl"></i></a>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mamadou Woury Barry">
+    <meta name="keywords" content="Portofolio,programmeur,stagiair,HTML,CSS,JavaScript,SQL,C#">
+    <meta name="description" content="Portofolio van een student in graduaat programmeren die een stageplaats zoekt">
+    <link rel="stylesheet" href="style.css">
+    <script src="/script.js"></script>
+    <title>Mamadou Woury Barry</title>
+    <script src="https://kit.fontawesome.com/6ceec5fb3d.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "T8eAVj2J5nydKIKNJ",
+            });
+
+        })();
+
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+
+                emailjs.send("service_1avkiuq", "template_zeqpyzk", {
+                    from_name: document.getElementById('firstname').value + " " + document.getElementById('lastname').value,
+                    to_name: "Mamadou Woury Barry",
+                    email_id: document.getElementById('email').value,
+                    Bedrijf: document.getElementById('company').value,
+                    message: document.getElementById('message').value,
+                })
+                    .then(() => {
+                        alert('SUCCESS!');
+                    }, (error) => {
+                        alert('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!--Navigatie bar -->
+    <nav class="nav-bar">
+        <ul>
+            <li> <a onclick="scrollToTop()"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li> <a onclick="scrollToSection('Over-mij')"><i class="fa-solid fa-user"></i>Over mij</a></li>
+            <li> <a onclick="scrollToSection('Projecten')"><i class="fa-solid fa-list-check"></i>Projecten</a></li>
+            <li> <a onclick="scrollToSection('Contact')"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+        </ul>
+
+    </nav>
+    <!--Eind navigatie bar -->
+
+    <!--De inhoud van de website-->
+    <div class="inhoud">
+
+        <!--Home section-->
+        <div id="Home">
+            <div class="home-img">
+                <img src="/asset/Naamloos (3).png" alt="wanted poster">
+
+            </div>
+            <div class="home-tekst">
+                <div class="home-tekst">
+                    <h1>
+                        Hallo, ik ben <span>Mamadou Woury Barry</span>
+                    </h1>
+
+                    <H2>
+                        Als laatstejaarstudent graduaat programmeren aan de <a
+                            href="https://www.ap.be/opleiding/toegepaste-informatica" target="_blank"> AP
+                            Hogeschool </a> zoek ik een boeiende stageplaats. <br> Periode : september- december
+                        2024.
+                    </H2>
+
+                    <div class="links">
+
+                        <a href="https://www.linkedin.com/in/mamadou-woury-barry-915374228/" target="_blank">
+                            <i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                        <a class="downloadbutton" href="/asset/CV Mamadou Woury Barry.docx"
+                            download="Mamadou_Woury_Barry_CV.docx">
+                            Mijn CV Downloaden</a>
+                        <a onclick="scrollToSection('Contact')">
+                            <i class="fa-solid fa-address-book fa-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="home-img">
+                <img src="/asset/4d74ac01-c702-4c6a-bdff-c1bec307e70e.jpg" alt="">
+            </div>
+
+        </div>
+        <!-- Eind van home section -->
+
+        <!-- Over mij section -->
+        <div id="Over-mij">
+            <h1></h1>
+            <h2>WIE BEN IK?</h2>
+            <p>
+                Mijn naam is Mamadou (Woury) BARRY, een gedreven 23-jarige student afkomstig uit <a
+                    href="/HTML/guinea.html" target="_blank">Guinea</a> . In 2019 ben ik
+                naar België gekomen om mijn vaardigheden op het gebied van technologie en programmeren verder te
+                ontwikkelen met de ambitie om zo mijn carrière in deze sector optimaal te starten. Maar eerst heb ik mij
+                gefocust op de Nederlandse taal, waarbij ik mijn vaardigheden aan scherpte bij <a
+                    href="https://www.uantwerpen.be/nl/centra/linguapolis/taalcursussen/"
+                    target="_blank">Linguapolis</a> en
+                vervolgens
+                bij <a href="https://cvoencora.stedelijkonderwijs.be/opleidingen/nt2-taalbad-verkort-richtgraad-3"
+                    target="_blank">Encora</a>.
+                Na het behalen van mijn certificaat NT2 richtgraad 4, ben ik begonnen aan de opleiding
+                Graduaat Programmeren aan de <a href="https://www.ap.be/opleiding/toegepaste-informatica"
+                    target="_blank">Ap
+                    Hogeschool</a>. Gedurende drie intensieve jaren heb ik HTML, CSS, JAVASCRIPT, C#,
+                SQL en REACT NATIVE bestudeerd en toegepast. Nu nog een succesvolle stage om mijn
+                diploma te halen! Daarna ben ik klaar om mijn volgende stappen te zetten in de wereld van
+                softwareontwikkeling en wil ik meteen aan de slag! <br> <br> Naast het studeren heb ik steeds als
+                student
+                bijgeklust, zo onder
+                meer in Horeca, evenementen, .. Een zeer interessante en leerrijke ervaring was bij <a
+                    href="https://beego.be/studentenjob/" target="_blank">BEEGO</a> waar ik
+                digital assistent senioren hielp op vlak van Hard- en Software. De leuke contacten en dankbare mensen
+                waren echt motiverend en ik ben fier op de goede scores die ik van mijn 'klanten' heb gekregen. <br>
+                Lees hieronder een paar van hun!
+
+            </p>
+            <div class="Reviews">
+                <img src="asset/IMG_4889.PNG" alt="Reviews" style=" width: 80%;">
+            </div>
+
+
+        </div>
+        <!-- Eind over mij section -->
+
+        <!-- projecten section -->
+        <div id="Projecten">
+            <div>
+                <h1>Mijn Projecten</h1>
+                <p>Ondekt hier enkele studieprojecten en creaties. Hopelijk overtuigen zij u van mijn
+                    professionele aanpak.</p>
+            </div>
+
+            <div class="projecten-inhoud">
+                <div>
+                    <h2>Hangman</h2>
+                    <p><b>Description:</b> Dit is een interactief spel waarin de speler een woord moet raden door
+                        letters te kiezen. De speler selecteert een categorie (zoals "fruit", "dieren" of "landen"),
+                        waarna een willekeurig woord uit die categorie wordt gekozen. De speler klikt vervolgens op
+                        letters om te raden welke in het gekozen woord voorkomen. Als de speler een juiste letter raadt,
+                        wordt deze onthuld in het woord. Als de speler een verkeerde letter raadt, wordt een deel van
+                        een tekening van een galg getekend. Het doel is om het woord te raden voordat de tekening van de
+                        galg compleet is. Als de speler het woord raadt voordat de galg volledig is getekend, wint de
+                        speler. Als de galg compleet is voordat het woord is geraden, verliest de speler.
+                    </p>
+                    <iframe src="/HTML/hangmanGame.html" frameborder="10"></iframe>
+
+                </div>
+                <div>
+                    <h2>Text To Speech</h2>
+                    <p><b>Description:</b> Dit HTML- en CSS-code creëert een eenvoudige interface voor een
+                        spraaksynthese-generator. De gebruiker kan tekst invoeren in het tekstgebied, een stem
+                        selecteren uit de beschikbare opties en vervolgens deze tekst omzetten in spraak door op de knop
+                        "Convert to Speech" te klikken. De interface is gebruikersvriendelijk ontworpen met het
+                        lettertype Montserrat en lichte blauwe kleurstijlen. Wanneer de gebruiker een stem selecteert en
+                        tekst omzet in spraak, gebruikt de toepassing de SpeechSynthesis API van JavaScript om de
+                        overeenkomstige stem te genereren op basis van de ingevoerde tekst
+                    </p>
+                    <iframe src="/HTML//textToSpeech.html" frameborder="10"></iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Eind projecten section -->
+
+        <!-- Contact section -->
+        <div id="Contact">
+            <h1>Contacteer Mij</h1>
+            <div class="contact-icons">
+                <a href="tel:+32 456 13 81 95"><i class="fa-solid fa-phone fa-2xl"></i> 0456 13 81 95</a>
+                <a href="mailto:mamadouwoury641@gamil.com"><i class="fa-solid fa-envelope fa-2xl"></i>
+                    mamadouwoury641@gamil.com</a>
+                <a href="https://www.google.com/maps/place/Deurne,+Anvers/@51.2209782,4.4411488,13.93z/data=!4m6!3m5!1s0x47c3f7803f137e95:0xd36a3a9efa1a8fb2!8m2!3d51.2203758!4d4.4595994!16zL20vMDQxa2pi?entry=ttu"
+                    target="_blank"><i class="fa-solid fa-location-dot fa-2xl"></i> 2100,Deurne
+                </a>
+
+            </div>
+
+            <form id="contact-form" action="mailto:mamadouwoury641@gmail.com" method="post" enctype="text/plain">
+                <label for="=firstname">Voornaam:</label>
+                <input type="text" id="firstname" required>
+                <label for="=lastname">Achternaam:</label>
+                <input type="text" id="lastname" required>
+                <label for="=company">Bedrijf:</label>
+                <input type="text" id="company" required>
+                <label for="=email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Bericht:</label>
+                <textarea id="message" cols="30" rows="10" required></textarea>
+                <input type="submit" value="Versturen">
+            </form>
+        </div>
+        <!-- Eind Contact section -->
+    </div>
+
+</body>
+
+</html>
