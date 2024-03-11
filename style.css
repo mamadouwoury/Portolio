@@ -171,11 +171,7 @@ iframe {
     width: 500px;
 }
 
-#Contact {
-    margin: 10px;
-    padding: 10px;
 
-}
 
 .contact-icons {
     display: flex;
@@ -196,12 +192,10 @@ label {
     font-weight: bold;
 }
 
-input[type=text], input[type=email] {
+input[type=text], input[type=email], input[type=number] {
     height: 50px;
     border-radius: 10px;
     margin-bottom: 10px;
-
-
 }
 
 textarea {
@@ -310,6 +304,12 @@ input[type=submit] {
         width: 40px;
     }
 
+    input[type=text], input[type=email], input[type=number] {
+        height: 35px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
 
 }
 
@@ -334,9 +334,11 @@ input[type=submit] {
         flex-direction: row;
         width: 100%;
     }
-    .nav-bar ul a{
+
+    .nav-bar ul a {
         border: none;
     }
+
     iframe {
         height: 400px;
         width: 400px;
@@ -355,5 +357,6 @@ input[type=submit] {
         height: 100%;
         margin-left: 35px;
     }
+
 
 }

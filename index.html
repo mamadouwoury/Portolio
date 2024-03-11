@@ -59,7 +59,7 @@
                             status.innerHTML = "";
                             status.style.borderRadius = "";
                             status.style.padding = "";
-                        }, 1500);
+                        }, 3000);
 
                     }, (error) => {
                         alert('FAILED...', error);
@@ -221,18 +221,18 @@
             </div>
 
             <form id="contact-form" action="mailto:mamadouwoury641@gmail.com" method="post" enctype="text/plain">
-                <label for="=firstname">Voornaam:</label>
+                <label for="=firstname">Voornaam *:</label>
                 <input type="text" id="firstname" required>
-                <label for="=lastname">Achternaam:</label>
+                <label for="=lastname">Achternaam *:</label>
                 <input type="text" id="lastname" required>
                 <label for="=company">Bedrijf:</label>
-                <input type="text" id="company" required>
-                <label for="=email">Email:</label>
+                <input type="text" id="company" >
+                <label for="=email">Email *:</label>
                 <input type="email" id="email" required>
                 <label for="=number">Telefoonnummer:</label>
                 <input type="number" id="phonenumber">
-                <label for="message">Bericht:</label>
-                <textarea id="message" cols="30" rows="10" required></textarea>
+                <label for="message">Bericht *:</label>
+                <textarea id="message" cols="10" rows="10" required></textarea>
                 <input type="submit" value="Versturen">
             </form>
         </div>
