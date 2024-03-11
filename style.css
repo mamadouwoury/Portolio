@@ -85,17 +85,10 @@ a i {
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
 }
 
-.home-tekst h1 {
+.home-tekst h1, .home-tekst h2 {
     text-align: left;
     margin: 0;
 }
-
-
-
-.home-tekst h2 {
-    text-align: left;
-}
-
 
 
 .home-tekst {
@@ -112,6 +105,7 @@ a i {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 15px;
 }
 
 .links a {
@@ -139,8 +133,8 @@ a i {
     text-align: left;
 }
 
-#Over-mij h1 {
-    text-align: center;
+#Over-mij h2 {
+    padding-top: 30px;
 }
 
 .Reviews {
@@ -171,7 +165,9 @@ iframe {
     width: 500px;
 }
 
-
+#Contact {
+    margin-left: 20px;
+}
 
 .contact-icons {
     display: flex;
@@ -213,6 +209,10 @@ input[type=submit] {
     background-color: #0F4C81;
 }
 
+input[type=submit]:active {
+    background-color: #5cb85c;
+}
+
 .contact-icons i {
     width: 40px;
 }
@@ -224,20 +224,6 @@ input[type=submit] {
 
 @media only screen and (max-width: 1410px) {
 
-    /* .nav-bar ul {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-
-    .inhoud {
-        margin: 0;
-    }
-
-    #Home {
-        margin: 0;
-    } */
     #Home {
         margin: 0;
         padding: 0;
