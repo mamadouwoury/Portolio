@@ -27,18 +27,17 @@
         window.onload = function () {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
-                // these IDs from the previous steps
-
+                document.getElementById('submit').disabled = true;
                 emailjs.send("service_1avkiuq", "template_zeqpyzk", {
-                    from_name: document.getElementById('firstname').value + " " + document.getElementById('lastname').value,
-                    to_name: "Mamadou Woury Barry",
+                    voornaam: document.getElementById('firstname').value,
+                    achternaam: document.getElementById('lastname').value,
                     telefoonnummer: document.getElementById('phonenumber').value,
-                    email_id: document.getElementById('email').value,
+                    email_adres: document.getElementById('email').value,
                     Bedrijf: document.getElementById('company').value,
                     message: document.getElementById('message').value,
                 })
                     .then(() => {
-
+                        document.getElementById('contact-form').reset();
                         var status = document.getElementById('status');
                         status.style.backgroundColor = "#0F4C81";
                         status.style.color = "#F9F9F9";
@@ -47,19 +46,18 @@
                         status.style.padding = "10px";
                         status.style.borderRadius = "10px";
                         status.innerHTML = "Hartelijk dank, ik neem snel contact op met u! Mamadou!",
-                            document.getElementById('contact-form').reset();
-
-                        setTimeout(() => {
-                            scrollToTop();
-                            status.style.backgroundColor = "";
-                            status.style.color = "";
-                            status.style.height = "";
-                            status.style.textAlign = "";
-                            status.style.padding = "";
-                            status.innerHTML = "";
-                            status.style.borderRadius = "";
-                            status.style.padding = "";
-                        }, 3000);
+                            setTimeout(() => {
+                                scrollToTop();
+                                document.getElementById('submit').disabled = false;
+                                status.style.backgroundColor = "";
+                                status.style.color = "";
+                                status.style.height = "";
+                                status.style.textAlign = "";
+                                status.style.padding = "";
+                                status.innerHTML = "";
+                                status.style.borderRadius = "";
+                                status.style.padding = "";
+                            }, 3000);
 
                     }, (error) => {
                         alert('FAILED...', error);
@@ -74,9 +72,9 @@
     <nav class="nav-bar">
         <ul>
             <li> <a onclick="scrollToTop()"><i class="fa-solid fa-house"></i>Home</a></li>
-            <li> <a onclick="scrollToSection('Over-mij')"><i class="fa-solid fa-user"></i>Over mij</a></li>
-            <li> <a onclick="scrollToSection('Projecten')"><i class="fa-solid fa-list-check"></i>Projecten</a></li>
-            <li> <a onclick="scrollToSection('Contact')"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+            <li> <a onclick="scrollToSection('Over-mij')"><i class="fa-solid fa-user"></i>Wie Ben Ik?</a></li>
+            <li> <a onclick="scrollToSection('Projecten')"><i class="fa-solid fa-list-check"></i>Mijn Projecten</a></li>
+            <li> <a onclick="scrollToSection('Contact')"><i class="fa-solid fa-address-book"></i>Contact Mij</a></li>
         </ul>
 
     </nav>
@@ -86,7 +84,7 @@
     <div class="inhoud">
 
         <!--Home section-->
-        <div id="Home">
+        <section id="Home">
             <div class="home-img">
                 <img src="asset/Naamloos (3).png" alt="wanted poster">
 
@@ -108,8 +106,8 @@
 
                         <a href="https://www.linkedin.com/in/mamadou-woury-barry-915374228/" target="_blank">
                             <i class="fa-brands fa-linkedin fa-2xl"></i></a>
-                        <a class="downloadbutton" href="asset/CV Mamadou Woury Barry.pdf"
-                            download="CV Mamadou Woury Barry.pdf">
+                        <a class="downloadbutton" href="asset/CV Mamadou Woury Barry.pdf.pdf"
+                            download="CV_Mamadou_Woury_BARRY.pdf">
                             Mijn CV Downloaden</a>
                         <a onclick="scrollToSection('Contact')">
                             <i class="fa-solid fa-address-book fa-2xl"></i></a>
@@ -122,11 +120,11 @@
                 <img src="asset/4d74ac01-c702-4c6a-bdff-c1bec307e70e.jpg" alt="">
             </div>
 
-        </div>
+        </section>
         <!-- Eind van home section -->
 
         <!-- Over mij section -->
-        <div id="Over-mij">
+        <section id="Over-mij">
             <h2>WIE BEN IK?</h2>
             <p>
                 Mijn naam is Mamadou (Woury) BARRY, een gedreven 23-jarige student afkomstig uit <a
@@ -145,7 +143,14 @@
                     Hogeschool</a>. Gedurende drie intensieve jaren heb ik HTML, CSS, JAVASCRIPT, C#,
                 SQL en REACT NATIVE bestudeerd en toegepast. Nu nog een succesvolle stage om mijn
                 diploma te halen! Daarna ben ik klaar om mijn volgende stappen te zetten in de wereld van
-                softwareontwikkeling en wil ik meteen aan de slag! <br> <br> Naast het studeren heb ik steeds als
+                softwareontwikkeling en wil ik meteen aan de slag! <br> <b>Ondertussen kom ik in aanmerking voor een
+                    individuele
+                    beroepsopleiding (IBO). Dit is een voordelige formule: u leert mij de kneepjes van het vak en
+                    betaalt
+                    tijdens mijn opleiding geen loon RSZ. Meer info vind u op <a
+                        href="https://www.vdab.be/ibo" target="_blank">vdab.be/ibo.</a> </b> <br> <br> Naast het
+                studeren heb
+                ik steeds als
                 student
                 bijgeklust, zo onder
                 meer in Horeca, evenementen, .. Een zeer interessante en leerrijke ervaring was bij <a
@@ -156,15 +161,17 @@
 
             </p>
             <div class="Reviews">
-                <img src="asset/IMG_4889.PNG" alt="Reviews" style=" width: 80%;">
+                <img src="asset/IMG_E4908-min.JPG" alt="Reviews" style=" width: 50%;">
+                <img src="asset/IMG_E4909-min.JPG" alt="Reviews" style=" width: 50%;">
+
             </div>
 
 
-        </div>
+        </section>
         <!-- Eind over mij section -->
 
         <!-- projecten section -->
-        <div id="Projecten">
+        <section id="Projecten">
             <div>
                 <h1>Mijn Projecten</h1>
                 <p>Ondekt hier enkele studieprojecten en creaties. Hopelijk overtuigen zij u van mijn
@@ -199,20 +206,19 @@
                     <iframe src="HTML/textToSpeech.html" frameborder="10"></iframe>
 
                 </div>
-
             </div>
 
-        </div>
+        </section>
         <!-- Eind projecten section -->
 
         <!-- Contact section -->
-        <div id="Contact">
+        <section id="Contact">
             <h1>Contacteer Mij</h1>
             <div id="status"></div>
             <div class="contact-icons">
                 <a href="tel:+32 456 13 81 95"><i class="fa-solid fa-phone fa-2xl"></i> 0456 13 81 95</a>
-                <a href="mailto:mamadouwoury641@gamil.com"><i class="fa-solid fa-envelope fa-2xl"></i>
-                    mamadouwoury641@gamil.com</a>
+                <a href="mailto:mamadouwoury641@gmail.com"><i class="fa-solid fa-envelope fa-2xl"></i>
+                    mamadouwoury641@gmail.com</a>
                 <a href="https://www.google.com/maps/place/Deurne,+Anvers/@51.2209782,4.4411488,13.93z/data=!4m6!3m5!1s0x47c3f7803f137e95:0xd36a3a9efa1a8fb2!8m2!3d51.2203758!4d4.4595994!16zL20vMDQxa2pi?entry=ttu"
                     target="_blank"><i class="fa-solid fa-location-dot fa-2xl"></i> 2100,Deurne
                 </a>
@@ -225,17 +231,25 @@
                 <label for="=lastname">Achternaam *:</label>
                 <input type="text" id="lastname" required>
                 <label for="=company">Bedrijf:</label>
-                <input type="text" id="company" >
+                <input type="text" id="company">
                 <label for="=email">Email *:</label>
                 <input type="email" id="email" required>
                 <label for="=number">Telefoonnummer:</label>
                 <input type="number" id="phonenumber">
                 <label for="message">Bericht *:</label>
                 <textarea id="message" cols="10" rows="10" required></textarea>
-                <input type="submit" value="Versturen">
+                <input type="submit" id="submit" value="Versturen">
             </form>
-        </div>
+        </section>
         <!-- Eind Contact section -->
+        <footer>
+            <a href="tel:+32 456 13 81 95"><i class="fa-solid fa-phone fa-2xl"></i> 0456 13 81 95</a>
+            <a href="mailto:mamadouwoury641@gmail.com"><i class="fa-solid fa-envelope fa-2xl"></i>
+                mamadouwoury641@gmail.com</a>
+            <a href="https://www.linkedin.com/in/mamadou-woury-barry-915374228/" target="_blank">
+                <i class="fa-brands fa-linkedin fa-2xl"></i></a>
+        </footer>
+
     </div>
 
 </body>

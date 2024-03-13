@@ -79,8 +79,8 @@ a i {
 }
 
 .home-img img {
-    height: 600px;
-    width: 400px;
+    height: 650px;
+    width: 410px;
     border-radius: 10px;
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
 }
@@ -131,10 +131,6 @@ a i {
     margin: 20px;
     padding: 10px;
     text-align: left;
-}
-
-#Over-mij h2 {
-    padding-top: 30px;
 }
 
 .Reviews {
@@ -220,6 +216,19 @@ input[type=submit]:active {
 .contact-icons a {
     margin: 10px;
     text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #0F4C81;
 }
 
 @media only screen and (max-width: 1410px) {
@@ -310,20 +319,15 @@ input[type=submit]:active {
     }
 
     .inhoud {
-        margin: 0;
+        margin-left: 15%;
         text-align: center;
     }
 
     .nav-bar ul {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
+
+        width: 15%;
     }
 
-    .nav-bar ul a {
-        border: none;
-    }
 
     iframe {
         height: 400px;
@@ -344,5 +348,17 @@ input[type=submit]:active {
         margin-left: 35px;
     }
 
+    footer {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50px;
+    }
+
+    footer a {
+        margin-top: 5px;
+
+    }
 
 }

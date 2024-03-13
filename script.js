@@ -11,18 +11,24 @@ function scrollToSection(sectionId) {
     section.scrollIntoView({ behavior: 'smooth' });
   }
 }
-function SendMail() {
-  let fullname = document.getElementById('Voornaam').value + document.getElementById('Achternaam').value;
-  var params = {
-    from_name: fullname.value,
-    email_id: document.getElementById('Email').value,
-    Bedrijf: getElementById('Bedrijf').value,
-    message: document.getElementById('Bericht').value
-  }
-  emailjs.sendForm('service_1avkiuq', 'template_zeqpyzk', this)
-    .then(() => {
-      alert('SUCCESS!');
-    }, (error) => {
-      alert('FAILED...', error);
-    });
+
+
+
+// Fonction pour ajouter la classe active au lien correspondant dans la barre de navigation
+function setActiveLink(sectionId) {
+  const navLinks = document.querySelectorAll('.nav-bar ul li a');
+
+  // Supprimer la classe active de tous les liens
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // Trouver le lien correspondant à la section et lui ajouter la classe active
+  navLinks.forEach(link => {
+    if (link.classList.contains(`nav-${sectionId}`)) {
+      link.classList.add('active');
+    }
+  });
 }
+
+
