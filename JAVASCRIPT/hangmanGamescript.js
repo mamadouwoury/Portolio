@@ -64,7 +64,7 @@ const blocker = () => {
 //Word Generator
 const generateWord = (optionValue) => {
     let optionsButtons = document.querySelectorAll(".options");
-    //If optionValur matches the button innerText then highlight the button
+    //If optionValue matches the button innerText then highlight the button
     optionsButtons.forEach((button) => {
         if (button.innerText.toLowerCase() === optionValue) {
             button.classList.add("active");
@@ -82,7 +82,7 @@ const generateWord = (optionValue) => {
     chosenWord = chosenWord.toUpperCase();
 
     //replace every letter with span containing dash
-    let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
+    let displayItem = chosenWord.replace(/./g, '<span class="dashes">_ </span>');
 
     //Display each element as span
     userInputSection.innerHTML = displayItem;

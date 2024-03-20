@@ -34,25 +34,24 @@ speechBtn.addEventListener("click", e => {
             textToSpeech(textarea.value);
             console.log("script is working")
         }
-        if (textarea.value.length > 80) {
-            setInterval(() => {
-                if (!synth.speaking && !isSpeaking) {
-                    isSpeaking = true;
-                    speechBtn.innerText = "Convert To Speech";
-                } else {
-                }
-            }, 500);
-            if (isSpeaking) {
-                synth.resume();
-                isSpeaking = false;
-                speechBtn.innerText = "Pause Speech";
-            } else {
-                synth.pause();
+        setInterval(() => {
+            if (!synth.speaking && !isSpeaking) {
                 isSpeaking = true;
-                speechBtn.innerText = "Resume Speech";
+                speechBtn.innerText = "Convert To Speech";
+            } else {
             }
+        }, 500);
+        if (isSpeaking) {
+            synth.resume();
+            isSpeaking = false;
+            speechBtn.innerText = "Pause Speech";
         } else {
-            speechBtn.innerText = "Convert To Speech";
+            synth.pause();
+            isSpeaking = true;
+            speechBtn.innerText = "Resume Speech";
         }
+    } else {
+        speechBtn.innerText = "Convert To Speech";
     }
+
 });
