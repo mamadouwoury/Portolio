@@ -109,21 +109,18 @@ h3, p {
     padding: 20px;
 }
 
-
+/* description text for each dishe & artist  */
 .description {
     height: 230px;
 }
 
+/* dishe & artist image */
 .link-img {
-
     height: 300px;
     margin-bottom: 10px;
 }
 
-
-
-
-.link-content {
+.link-img-content {
     opacity: 0.8;
     height: 300px;
     width: 300px;
@@ -134,11 +131,12 @@ h3, p {
 
 }
 
-.link-content:hover {
+.link-img-content:hover {
     opacity: 1;
 
 }
 
+/* dishe & artist link */
 .link-img a {
     display: flex;
     justify-content: center;
@@ -152,7 +150,7 @@ h3, p {
 
 }
 
-
+/* footer section  */
 .footer {
     display: flex;
     flex-direction: row;
@@ -166,17 +164,10 @@ h3, p {
     color: #0F4C81;
 }
 
+
+/* changing the direction of (columns) to column now Guinea comes first then food onder it ... */
+/* resizing de dishes en artists images */
 @media only screen and (max-width: 1250px) {
-
-    .link-content {
-        height: 280px;
-        width: 270px;
-    }
-
-    .description {
-        height: 250px;
-    }
-
     .columns {
         flex-direction: column;
     }
@@ -206,27 +197,29 @@ h3, p {
 
     .description {
         width: 40%;
-        height: 100px;
+        height: 250px;
     }
-
     .link-img {
         width: 60%;
     }
 
-    .link-content {
+   .link-img-content {
         height: 200px;
         width: 450px;
         margin: auto;
 
     }
+ 
+
+ 
 }
 
 
-
+/* resizing the dishes en artists images */
 @media only screen and (max-width: 960px) {
 
 
-    .link-content {
+    .link-img-content {
         height: 260px;
         width: 350px;
         margin: auto;
@@ -237,6 +230,7 @@ h3, p {
 
 }
 
+/* changing the direction of the header(flag & map), the Guinea column, dishes column, artists column & dishes to column  */
 @media only screen and (max-width: 720px) {
 
     .header, .dishe, .artist {
@@ -246,7 +240,7 @@ h3, p {
 
 
 
-    .link-content {
+    .link-img-content {
         height: 100%;
         width: 400px;
         margin: auto;
@@ -268,6 +262,7 @@ h3, p {
     }
 }
 
+/* making the webpage responsive for smartphones  */
 @media only screen and (max-width: 450px) {
     .header div img, .header div iframe {
         width: 98%;
@@ -291,7 +286,7 @@ h3, p {
         margin-left: 0;
     }
 
-    .link-content {
+    .link-img-content {
         height: 100%;
         width: 300px;
         margin: auto;
