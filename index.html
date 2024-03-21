@@ -98,8 +98,9 @@
 
                 <p>
                     Als laatstejaarstudent graduaat programmeren aan de <a
-                        href="https://www.ap.be/opleiding/toegepaste-informatica" target="_blank"> AP
-                        Hogeschool</a>, zoek ik een boeiende stageplaats. <br> <br><b>Periode :</b> september- december
+                        href="https://www.ap.be/opleiding/toegepaste-informatica" target="_blank"><b>AP
+                            Hogeschool</b></a>, zoek ik een boeiende stageplaats. <br> <br><b>Periode :</b> september-
+                    december
                     2024. <br><b>Duurtijd:</b> 15 weken.
                 </p>
 
@@ -183,58 +184,73 @@
 
             <!-- projects iframes en clip -->
             <div class="projects-content">
-                <div class="project">
-                    <div class="project-text">
-                        <h2>Hangman</h2>
-                        <p> Dit is een interactief spel waarin de speler een woord moet raden door
-                            letters te kiezen. Het ontwikkelen werd mogelijk gemaak door middel van HTML, CSS en
-                            JAVASCRIPT. De tekening wordt gedaan met JavaScript.
-                        </p>
-                    </div>
-                    <div>
-                        <iframe src="HTML/hangmanGame.html" frameborder="10"></iframe>
+                <div class="projects-row">
+                    <div class="project">
+                        <div class="project-text">
+                            <h2>Hangman</h2>
+                            <p> Dit is een interactief spel waarin de speler een woord moet raden door
+                                letters te kiezen. Het ontwikkelen werd mogelijk gemaak door middel van HTML, CSS en
+                                JAVASCRIPT. De tekening wordt gedaan met JavaScript.
+                            </p>
+                        </div>
+                        <div>
+                            <iframe src="HTML/hangmanGame.html" frameborder="10"></iframe>
 
+                        </div>
+                    </div>
+
+
+
+                    <div class="project">
+                        <div class="project-text">
+                            <h2>Text To Speech</h2>
+                            <p>Dit HTML, CSS en JAVASCRIPTC code creëert een eenvoudige interface voor een
+                                spraaksynthese-generator. Wanneer de gebruiker een stem en taal
+                                selecteert en
+                                tekst omzet in spraak, gebruikt de toepassing de SpeechSynthesis API om de
+                                overeenkomstige stem te genereren op basis van de ingevoerde tekst.
+                            </p>
+                        </div>
+                        <div>
+                            <iframe src="HTML/textToSpeech.html" frameborder="10"></iframe>
+
+
+                        </div>
                     </div>
                 </div>
 
+                <div class="div-video">
+                    <div class="video-text">
+                        <h2>Movie Applicatie</h2>
+                        <p>
 
-
-                <div class="project">
-                    <div class="project-text">
-                        <h2>Text To Speech</h2>
-                        <p>Dit HTML, CSS en JAVASCRIPTC code creëert een eenvoudige interface voor een
-                            spraaksynthese-generator. Wanneer de gebruiker een stem en taal
-                            selecteert en
-                            tekst omzet in spraak, gebruikt de toepassing de SpeechSynthesis API om de
-                            overeenkomstige stem te genereren op basis van de ingevoerde tekst.
+                            Deze applicatie, ontwikkeld met TypeScript en het React Native-framework, biedt gebruikers
+                            de
+                            mogelijkheid om details van films te verkennen. Door middel van API-oproepen naar de
+                            filmdatabase
+                            (The Movie Database) worden gegevens opgehaald en weergegeven op vier verschillende
+                            pagina's,
+                            elk
+                            met een lijst van films. Wanneer een gebruiker op een specifieke film klikt, opent zich een
+                            detailpagina waarop nog een API-oproep wordt gedaan om uitgebreide informatie over die film
+                            te
+                            tonen. Bovendien stelt de detailpagina gebruikers in staat om de film te waarderen door deze
+                            te
+                            liken of te disliken.
                         </p>
                     </div>
-                    <div>
-                        <iframe src="HTML/textToSpeech.html" frameborder="10"></iframe>
-
-
+                    <div class="video-contenair">
+                        <video src="asset/DXJT2569.mp4" controls></video>
                     </div>
+
+
+
                 </div>
-
-
 
             </div>
 
 
-            <div class="div-video">
-                <h2>Movie Applicatie</h2>
-                <p>
 
-                    Deze applicatie, ontwikkeld met TypeScript en het React Native-framework, biedt gebruikers de
-                    mogelijkheid om details van films te verkennen. Door middel van API-oproepen naar de filmdatabase
-                    (The Movie Database) worden gegevens opgehaald en weergegeven op vier verschillende pagina's, elk
-                    met een lijst van films. Wanneer een gebruiker op een specifieke film klikt, opent zich een
-                    detailpagina waarop nog een API-oproep wordt gedaan om uitgebreide informatie over die film te
-                    tonen. Bovendien stelt de detailpagina gebruikers in staat om de film te waarderen door deze te
-                    liken of te disliken.
-                </p>
-                <video src="asset/DXJT2569.mp4" controls></video>
-            </div>
 
 
         </section>
@@ -246,15 +262,15 @@
             <div id="status"></div>
 
             <form id="contact-form" method="post">
-                <label for="=firstname">Voornaam *:</label>
+                <label for="firstname">Voornaam *:</label>
                 <input type="text" id="firstname" required>
-                <label for="=lastname">Achternaam *:</label>
+                <label for="lastname">Achternaam *:</label>
                 <input type="text" id="lastname" required>
-                <label for="=company">Bedrijf:</label>
+                <label for="company">Bedrijf:</label>
                 <input type="text" id="company">
-                <label for="=email">Email *:</label>
+                <label for="email">Email *:</label>
                 <input type="email" id="email" required>
-                <label for="=number">Telefoonnummer:</label>
+                <label for="phonenumber">Telefoonnummer:</label>
                 <input type="number" id="phonenumber">
                 <label for="message">Bericht :</label>
                 <textarea id="message" cols="10" rows="10"></textarea>
