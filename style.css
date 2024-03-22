@@ -515,32 +515,32 @@ input[type=submit]:active {
 
 /* for telephon */
 @media only screen and (max-width: 500px) {
-  
+
     .nav-bar {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-
-
-    }
-
-    .home-text {
-        margin-top: 80px;
+        height: 100px;
+        background-color: #F9F9F9;
     }
 
     .nav-bar ul {
-        background-color: #F9F9F9;
-        display: flex;
+        position: relative;
         width: 100%;
-        height: 10%;
+        display: flex;
+        flex-direction: row;
 
+        ;
     }
 
     .nav-bar li {
-        padding: 2px;
         height: 100%;
-        width: 50%;
     }
+
+
+    /* .home-text {
+        margin-top: 80px;
+    } */
 
     .content {
         margin-left: 0;
