@@ -519,8 +519,7 @@ input[type=submit]:active {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        width: 345px;
-        margin: 20px;
+        width: 100%;
         background-color: #F9F9F9;
     }
 
