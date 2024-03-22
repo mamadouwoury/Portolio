@@ -522,7 +522,7 @@ input[type=submit]:active {
 /* for telephon */
 @media only screen and (max-width: 500px) {
 
-  
+
     .nav-bar {
         position: -webkit-sticky;
         position: sticky;
@@ -534,8 +534,9 @@ input[type=submit]:active {
 
     .nav-bar ul {
         display: flex;
-      
+
     }
+
     .nav-bar li {
         height: 60px;
     }
@@ -544,6 +545,14 @@ input[type=submit]:active {
     .content {
         margin: 0;
 
+    }
+
+    #home {
+        padding-top: 45px;
+    }
+
+    #about-me,#projects,#contact {
+        padding-top: 35px;
     }
 
 
