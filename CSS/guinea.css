@@ -9,10 +9,15 @@ body {
 }
 
 /* nav-bar */
-.nav-bar ul {
+.nav-bar {
+    position: fixed;
     height: 100%;
     width: 10%;
-    position: fixed;
+}
+
+.nav-bar ul {
+
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -199,19 +204,20 @@ h3, p {
         width: 40%;
         height: 250px;
     }
+
     .link-img {
         width: 60%;
     }
 
-   .link-img-content {
+    .link-img-content {
         height: 200px;
         width: 450px;
         margin: auto;
 
     }
- 
 
- 
+
+
 }
 
 
@@ -264,23 +270,22 @@ h3, p {
 
 /* making the webpage responsive for smartphones  */
 @media only screen and (max-width: 450px) {
+    .nav-bar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: #F9F9F9;
+    }
+
+    .nav-bar li {
+        height: 60px;
+    }
+
     .header div img, .header div iframe {
         width: 98%;
     }
 
-    .nav-bar {
-        margin: 20px;
-
-    }
-
-    .nav-bar ul {
-        position: relative;
-        width: 100%;
-    }
-
-    .nav-bar li {
-        padding: 5px;
-    }
 
     .content {
         margin-left: 0;
