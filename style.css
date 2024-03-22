@@ -520,24 +520,27 @@ input[type=submit]:active {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        height: 200px;
-        background-color: #F9F9F9;
+        width: 90%;
+
+    }
+
+    .home-text {
+        margin-top: 80px;
     }
 
     .nav-bar ul {
-        position: relative;
-        width: 100%
-        ;
+        background-color: #F9F9F9;
+        display: flex;
+        width: 100%;
+        height: 10%;
+
     }
 
     .nav-bar li {
-        height: 50px;
+        padding: 2px;
+        height: 100%;
+        width: 50%;
     }
-
-
-    /* .home-text {
-        margin-top: 80px;
-    } */
 
     .content {
         margin-left: 0;
