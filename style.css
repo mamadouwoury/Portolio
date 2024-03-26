@@ -232,7 +232,7 @@ iframe {
     margin: 5px;
     height: 500px;
     width: 100%;
-    
+
 }
 
 .video-text div {
@@ -241,10 +241,9 @@ iframe {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5px;
-    border:1px solid #0F4C81;
+    border: 1px solid #0F4C81;
     border-radius: 10px;
-   
+
 }
 
 
@@ -344,15 +343,12 @@ input[type=submit]:active {
     }
 
 
-    iframe, video {
+    iframe, video, .video-text div {
         height: 400px;
         width: 385px;
     }
 
-    .video-text div {
-        height: 500px;
-        width: 385px;
-    }
+
 
 
 }
@@ -382,7 +378,12 @@ input[type=submit]:active {
         text-align: center;
     }
 
-    iframe, video {
+    .video-text {
+        display: flex;
+        justify-content: center;
+    }
+
+    iframe, video, .video-text div {
         height: 500px;
         width: 500px;
 
@@ -461,12 +462,14 @@ input[type=submit]:active {
 /* changing the direction on the reviews photo & the footer to column */
 @media only screen and (max-width: 700px) {
 
-    iframe, video {
+    iframe, video,.video-text div {
         height: 510px;
         width: 365px;
 
     }
-
+.video-contenair{
+    margin: 20px 0 0 0;
+}
     .reviews {
         display: flex;
         flex-direction: column;
@@ -523,7 +526,7 @@ input[type=submit]:active {
     }
 
 
-    iframe, video {
+    iframe, video,.video-text div {
         height: 510px;
         width: 340px;
 
