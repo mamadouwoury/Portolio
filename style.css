@@ -389,6 +389,9 @@ input[type=submit]:active {
 
     }
 
+    .video-contenair {
+        margin: 50px 0;
+    }
 
 }
 
@@ -421,6 +424,7 @@ input[type=submit]:active {
 
 
     }
+
 
 
 }
@@ -462,14 +466,14 @@ input[type=submit]:active {
 /* changing the direction on the reviews photo & the footer to column */
 @media only screen and (max-width: 700px) {
 
-    iframe, video,.video-text div {
+    iframe, video, .video-text div {
         height: 510px;
         width: 365px;
 
     }
-.video-contenair{
-    margin: 20px 0 0 0;
-}
+
+
+
     .reviews {
         display: flex;
         flex-direction: column;
@@ -526,7 +530,7 @@ input[type=submit]:active {
     }
 
 
-    iframe, video,.video-text div {
+    iframe, video, .video-text div {
         height: 510px;
         width: 340px;
 
