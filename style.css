@@ -232,11 +232,19 @@ iframe {
     margin: 5px;
     height: 500px;
     width: 100%;
+    
 }
 
 .video-text div {
     height: 500px;
     width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    border:1px solid #0F4C81;
+    border-radius: 10px;
+   
 }
 
 
