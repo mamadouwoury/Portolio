@@ -100,7 +100,7 @@ a i {
     flex-direction: column;
     justify-content: center;
     margin: 5px;
-    height: 620px;
+    height: 600px;
     width: 33%;
     padding: 10px;
     border-radius: 10px;
@@ -125,6 +125,7 @@ a i {
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .links a {
@@ -153,7 +154,7 @@ a i {
 
 .home-img img {
 
-    height: 620px;
+    height: 600px;
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
@@ -163,6 +164,7 @@ a i {
 /* about me section */
 #about-me {
     padding: 20px 20px;
+    line-height: 2;
 }
 
 /* about me images (reviews screenshots) */
@@ -200,9 +202,11 @@ a i {
 /* every single project */
 .project {
     width: 100%;
-    margin: 5px;
+    margin: 15px;
     display: inherit;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* title & description of the project */
@@ -220,38 +224,22 @@ iframe {
 }
 
 /* display of a clip of project 3 */
-.div-video {
-    margin-top: 40px;
-    width: 100%;
-    display: flex;
-
-}
-
-/* title & description of the project */
-.video-text {
-    margin: 5px;
-    height: 500px;
-    width: 100%;
-
-}
-
-.video-text div {
+.migosmoodtext {
+    border: 1px solid #0F4C81;
     height: 500px;
     width: 460px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid #0F4C81;
     border-radius: 10px;
-
+    padding: 10px;
+    line-height: 2;
 }
+
+
+
+/* title & description of the project */
+
 
 
 /* the clip */
-.video-contenair {
-    margin: 5px;
-    width: 100%;
-}
 
 video {
     height: 500px;
@@ -336,20 +324,20 @@ input[type=submit]:active {
 
 @media only screen and (max-width: 1230px) {
 
-
-
     .project-text {
         height: 250px;
     }
 
 
-    iframe, video, .video-text div {
+    iframe, video,.migosmoodtext{
         height: 400px;
         width: 385px;
     }
 
 
-
+    .migosmoodtext{
+        line-height: 1.5;
+    }
 
 }
 
@@ -373,24 +361,15 @@ input[type=submit]:active {
     }
 
 
-    .div-video {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .video-text {
-        display: flex;
-        justify-content: center;
-    }
-
-    iframe, video, .video-text div {
+    iframe, video,.migosmoodtext {
         height: 500px;
         width: 500px;
 
     }
 
-    .video-contenair {
-        margin: 50px 0;
+    .migosmoodtext{
+        line-height: 2;
     }
 
 }
@@ -409,10 +388,7 @@ input[type=submit]:active {
         font-size: 11px;
     }
 
-    .links {
-        display: flex;
-        flex-direction: column;
-    }
+    
 
     .downloadbutton {
         width: 100%;
@@ -466,13 +442,13 @@ input[type=submit]:active {
 /* changing the direction on the reviews photo & the footer to column */
 @media only screen and (max-width: 700px) {
 
-    iframe, video, .video-text div {
+    iframe, video,.migosmoodtext {
         height: 510px;
         width: 365px;
-
     }
-
-
+    .migosmoodtext{
+        line-height: 1.5;
+    }
 
     .reviews {
         display: flex;
@@ -496,7 +472,6 @@ input[type=submit]:active {
 
 /* for telephon */
 @media only screen and (max-width: 500px) {
-
 
     .nav-bar {
         position: -webkit-sticky;
@@ -530,7 +505,7 @@ input[type=submit]:active {
     }
 
 
-    iframe, video, .video-text div {
+    iframe, video,.migosmoodtext {
         height: 510px;
         width: 340px;
 
