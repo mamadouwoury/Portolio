@@ -104,10 +104,3 @@ form button {
 form button:hover {
     background: #0F4C81;
 }
-
-@meta(max-width:400px) {
-    .wrapper {
-        max: width 345px;
-        width: 100%
-    }
-}
