@@ -95,7 +95,6 @@ a i {
 
 /* home section text */
 .home-text {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,6 +106,10 @@ a i {
     background-color: #0F4C81;
     color: #F9F9F9;
 
+}
+
+.home-text p {
+    font-size: 22px;
 }
 
 /* set the color of the first link in home text */
@@ -126,11 +129,13 @@ a i {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 25px 0 5px 0;
 }
 
 .links a {
     margin: 7px;
 }
+
 
 /* home text download (cv) button */
 .downloadbutton {
@@ -138,7 +143,7 @@ a i {
     justify-content: center;
     align-items: center;
     width: 200px;
-    height: 47px;
+    height: 35px;
     border-radius: 10px;
     text-decoration: none;
     border: none;
@@ -171,6 +176,7 @@ a i {
 .reviews {
     display: flex;
     justify-content: center;
+    margin: 0 30px;
 }
 
 #about-me img {
@@ -202,7 +208,7 @@ a i {
 /* every single project */
 .project {
     width: 100%;
-    margin:0 0 100px 0;
+    margin: 0 0 100px 0;
     display: inherit;
     flex-direction: column;
     align-items: center;
@@ -318,25 +324,32 @@ input[type=submit]:active {
 
     }
 
+    .home-text p {
+        font-size: 17px;
+    }
+
 }
 
 /* resizing of the home section text & images */
 /* resizing of the projects iframes & clip */
 
 @media only screen and (max-width: 1230px) {
+    .home-text p {
+        font-size: 16px;
+    }
 
     .project-text {
         height: 250px;
     }
 
 
-    iframe, video,.migosmoodtext{
+    iframe, video, .migosmoodtext {
         height: 400px;
         width: 385px;
     }
 
 
-    .migosmoodtext{
+    .migosmoodtext {
         line-height: 1.5;
     }
 
@@ -361,15 +374,18 @@ input[type=submit]:active {
         padding: 10px;
     }
 
+    .home-text p {
+        font-size: 16px;
+    }
 
 
-    iframe, video,.migosmoodtext {
+    iframe, video, .migosmoodtext {
         height: 500px;
         width: 500px;
 
     }
 
-    .migosmoodtext{
+    .migosmoodtext {
         line-height: 2;
     }
 
@@ -389,7 +405,7 @@ input[type=submit]:active {
         font-size: 11px;
     }
 
-    
+
 
     .downloadbutton {
         width: 100%;
@@ -424,7 +440,7 @@ input[type=submit]:active {
     }
 
     .home-text h1, .home-text p {
-        font-size: 100%;
+        font-size: 28px;
     }
 
     .home-img {
@@ -443,11 +459,12 @@ input[type=submit]:active {
 /* changing the direction on the reviews photo & the footer to column */
 @media only screen and (max-width: 700px) {
 
-    iframe, video,.migosmoodtext {
+    iframe, video, .migosmoodtext {
         height: 510px;
         width: 365px;
     }
-    .migosmoodtext{
+
+    .migosmoodtext {
         line-height: 1.5;
     }
 
@@ -501,7 +518,7 @@ input[type=submit]:active {
     }
 
 
-    iframe, video,.migosmoodtext {
+    iframe, video, .migosmoodtext {
         height: 510px;
         width: 340px;
 
