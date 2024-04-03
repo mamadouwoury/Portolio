@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-* {    color: #0F4C81;
+
+* {
+    color: #0F4C81;
 
     padding: 0;
     margin: 0;
@@ -13,7 +15,7 @@ body {
 
 .container {
     font-size: 16px;
-    background-color: #ffffff;
+    background-color: #efefef;
     width: 90vw;
     max-width: 34em;
     position: absolute;
@@ -46,8 +48,8 @@ body {
 }
 
 #options-container button:disabled {
-    border: 3px solid #808080;
-    color: #808080;
+    border: 3px solid #888;
+    color: #888;
     background-color: #efefef;
 }
 
@@ -69,11 +71,11 @@ body {
     height: 2.4em;
     width: 2.4em;
     border-radius: 0.3em;
-    background-color: #ffffff;
+    background-color: #efefef;
 }
 
 .new-game-popup {
-    background-color: #ffffff;
+    background-color: #efefef;
     position: absolute;
     left: 0;
     top: 0;

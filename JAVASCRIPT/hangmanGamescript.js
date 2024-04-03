@@ -17,7 +17,13 @@ let options = {
         "Granaatappel",
         "Watermeloen",
     ],
-    dieren: ["Egel", "Neushoorn", "Eekhoorn", "Panter", "Walrus", "Zebra"],
+    dieren: [
+        "Egel",
+        "Neushoorn",
+        "Eekhoorn",
+        "Panter",
+        "Walrus",
+        "Zebra"],
     landen: [
         "Indie",
         "Hongarije",
