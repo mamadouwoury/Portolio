@@ -19,9 +19,9 @@ let options = {
     ],
     dieren: ["Egel", "Neushoorn", "Eekhoorn", "Panter", "Walrus", "Zebra"],
     landen: [
-        "Indië",
+        "Indie",
         "Hongarije",
-        "België",
+        "Belgie",
         "Zwitserland",
         "Zimbabwe",
         "Engeland",
