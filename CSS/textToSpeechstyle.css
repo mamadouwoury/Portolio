@@ -69,6 +69,7 @@ textarea {
 }
 
 select {
+    border: 1px, solid #0F4C81;
     height: 100%;
     border-radius: 10px;
     font-size: 14px;
