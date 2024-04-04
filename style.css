@@ -516,6 +516,12 @@ input[type=submit]:active {
     #about-me, #projects, #contact {
         padding-top: 35px;
     }
+    .reviews{
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+    }
+   
 
 
     iframe, video, .migosmoodtext {
