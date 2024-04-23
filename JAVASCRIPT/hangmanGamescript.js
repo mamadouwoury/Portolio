@@ -34,7 +34,7 @@ let options = {
         "Olijf",
         "Papaja",
         "Peer",
-        "Pitaja",
+        "Drakenvrucht",
         "Pompelmoes",
         "Sinaasappel",
         "Watermeloen",
@@ -256,7 +256,7 @@ const initializer = () => {
                         //if winCount equals word lenfth
                         if (foudedletters == charArray.length) {
                             winCount += 1;
-                            resultText.innerHTML = `<h2 class='win-msg'>You Win!! <br> Your score is: ${winCount}</h2><p>The word was <span>${chosenWord}</span></p>`;
+                            resultText.innerHTML = `<h2 class='win-msg'>You Win!! <br> Your Score Is: ${winCount}</h2><p>The word was <span>${chosenWord}</span></p>`;
                             //block all buttons
                             blocker();
                         }
@@ -269,7 +269,7 @@ const initializer = () => {
                 drawMan(count);
                 //Count==6 because head,body,left arm, right arm,left leg,right leg
                 if (count == 6) {
-                    resultText.innerHTML = `<h2 class='lose-msg'>You Lose!! <br> Your score is: ${winCount}</h2><p>The word was <span>${chosenWord}</span></p>`;
+                    resultText.innerHTML = `<h2 class='lose-msg'>You Lose!! <br> Your Score Is: ${winCount}</h2><p>The word was <span>${chosenWord}</span></p>`;
                     // set de score to zero
                     winCount = 0;
                     blocker();
