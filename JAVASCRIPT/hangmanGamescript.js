@@ -11,31 +11,158 @@ const resultText = document.getElementById("result-text");
 let options = {
     fruit: [
         "Appel",
-        "Bosbes",
-        "Mandarijn",
+        "Aardbei",
         "Ananas",
+        "Abrikoos",
+        "Bosbes",
+        "Banaan",
+        "Cantaloupe",
+        "Cashewappel",
+        "Citroen",
+        "Dadel",
+        "Druif",
+        "Framboos",
         "Granaatappel",
+        "Guave",
+        "Jackfruit",
+        "Kers",
+        "Kiwi",
+        "Limoen",
+        "Mandarijn",
+        "Mango",
+        "Meloen",
+        "Olijf",
+        "Papaja",
+        "Peer",
+        "Pitaja",
+        "Pompelmoes",
+        "Sinaasappel",
         "Watermeloen",
     ],
     dieren: [
+        "Aap",
+        "Albatros",
+        "Alligator",
+        "Antilope",
+        "Baviaan",
+        "Beer",
+        "Cheetah",
+        "Coyote",
+        "Dolfijn",
+        "Duizendpoot",
+        "Dromedaris",
+        "Flamingo",
+        "Girafe",
+        "Gorilla",
+        "Haai",
+        "Hamster",
+        "Hond",
+        "Hyena",
+        "Impala",
+        "Jaguar",
+        "Kangoeroe",
+        "Kauw",
+        "Kip",
+        "Lama",
+        "Leeuw",
+        "luipaard",
+        "Lynx",
+        "Muis",
+        "Octopus",
+        "Poema",
+        "Paard",
+        "Rat",
+        "Raaf",
+        "Slang",
+        "Spin",
+        "Schorpioen",
+        "Tijger",
+        "vlinder",
+        "Varken",
+        "Wolf",
         "Egel",
         "Neushoorn",
         "Eekhoorn",
         "Panter",
         "Walrus",
-        "Zebra"],
-    landen: [
-        "Indie",
-        "Hongarije",
-        "Belgie",
-        "Zwitserland",
-        "Zimbabwe",
-        "Engeland",
-        "Portugal"
+        "Zebra"
     ],
+    landen: [
+        "Afghanistan",
+        "Albanie",
+        "Algerije",
+        "Andorra",
+        "Angola",
+        "Argentinie",
+        "Armenie",
+        "Aruba",
+        "Australie",
+        "Azerbeidzjan",
+        " Bahama's",
+        "Bangladesh",
+        "Barbados",
+        "Belgie",
+        "Benin",
+        "Bolivia",
+        "Botswana",
+        "Brazilie",
+        "Burundi",
+        "Canada",
+        "Chili",
+        "China",
+        "Colombia",
+        "Cuba",
+        "Denemarken",
+        "Duitsland",
+        "Egypte",
+        "Frankrijk",
+        "Ghana ",
+        "Guatemala",
+        "Guinea",
+        "Haiti",
+        "Honduras",
+        "Ierland",
+        "Iran",
+        "Italie",
+        "Ivoorkust",
+        "Jamaica",
+        "Kenia",
+        "Liberia",
+        "Luxemburg",
+        "Mali",
+        "Malta",
+        "Monaco",
+        "Nederland",
+        "Nigeria",
+        "Noorwegen",
+        "Oeganda",
+        "Pakistan",
+        "palestina",
+        "Portugal",
+        "Qatar",
+        "Rusland",
+        "Rwanda",
+        "Senegal",
+        "Singapore",
+        "Soudan",
+        "spanje",
+        "Suriname",
+        "Thailand",
+        "Togo",
+        "Tunisie",
+        "Uruguay",
+        "Venezuela",
+        "Vietnam",
+        "Wales",
+        "Zambia",
+        "Zimbabwe",
+        "Zweden",
+        "Zwitserland"
+    ]
 };
 
 //count
+let foudedletters = 0;
 let winCount = 0;
 let count = 0;
 
@@ -43,7 +170,7 @@ let chosenWord = "";
 
 //Display option buttons
 const displayOptions = () => {
-    optionsContainer.innerHTML += `<h3>Please Select An Option</h3>`;
+    optionsContainer.innerHTML += `<h3>Please Select An Option</h3> <br> <h3>Your Score: ${winCount}</h3>`;
     let buttonCon = document.createElement("div");
     for (let value in options) {
         buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
@@ -88,7 +215,7 @@ const generateWord = (optionValue) => {
     chosenWord = chosenWord.toUpperCase();
 
     //replace every letter with span containing dash
-    let displayItem = chosenWord.replace(/./g, '<span class="dashes">_ </span>');
+    let displayItem = chosenWord.replace(/./g, '<span class="dashes" style="margin-right:5px">_</span>');
 
     //Display each element as span
     userInputSection.innerHTML = displayItem;
@@ -96,8 +223,9 @@ const generateWord = (optionValue) => {
 
 //Initial Function (Called when page loads/user presses new game)
 const initializer = () => {
-    winCount = 0;
+    foudedletters = 0;
     count = 0;
+
 
     //Initially erase all content and hide letteres and new game button
     userInputSection.innerHTML = "";
@@ -124,10 +252,11 @@ const initializer = () => {
                         //replace dash with letter
                         dashes[index].innerText = char;
                         //increment counter
-                        winCount += 1;
+                        foudedletters += 1;
                         //if winCount equals word lenfth
-                        if (winCount == charArray.length) {
-                            resultText.innerHTML = `<h2 class='win-msg'>You Win!!</h2><p>The word was <span>${chosenWord}</span></p>`;
+                        if (foudedletters == charArray.length) {
+                            winCount += 1;
+                            resultText.innerHTML = `<h2 class='win-msg'>You Win!! <br> Your score is: ${winCount}</h2><p>The word was <span>${chosenWord}</span></p>`;
                             //block all buttons
                             blocker();
                         }
@@ -140,7 +269,9 @@ const initializer = () => {
                 drawMan(count);
                 //Count==6 because head,body,left arm, right arm,left leg,right leg
                 if (count == 6) {
-                    resultText.innerHTML = `<h2 class='lose-msg'>You Lose!!</h2><p>The word was <span>${chosenWord}</span></p>`;
+                    resultText.innerHTML = `<h2 class='lose-msg'>You Lose!! <br> Your score is: ${winCount}</h2><p>The word was <span>${chosenWord}</span></p>`;
+                    // set de score to zero
+                    winCount = 0;
                     blocker();
                 }
             }
@@ -161,7 +292,7 @@ const initializer = () => {
 const canvasCreator = () => {
     let context = canvas.getContext("2d");
     context.beginPath();
-    context.strokeStyle = "#000";
+    context.strokeStyle = "#0F4C81";
     context.lineWidth = 2;
 
     //For drawing lines
